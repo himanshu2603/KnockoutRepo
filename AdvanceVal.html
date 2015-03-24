@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Parsley Demo - Form Wizard</title>
+
+    <!-- BEGIN META -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="your,keywords">
+    <meta name="description" content="Short explanation about this website">
+    <!-- END META -->
+    <!-- BEGIN STYLESHEETS -->
+  <link href="~/Content/jsCssParsley/googleapis.css" rel='stylesheet' type='text/css' />
+    <link type="text/css" rel="stylesheet" href="http://www.codecovers.eu/assets/css/modules/materialadmin/css/theme-default/bootstrap.css?1422823238" />
+ 
+   
+
+
+    <link type="text/css" rel="stylesheet" href="http://www.codecovers.eu/assets/css/modules/materialadmin/css/theme-default/materialadmin.css?1422823243" />
+  
+    <link type="text/css" rel="stylesheet" href="http://www.codecovers.eu/assets/css/modules/materialadmin/css/theme-default/font-awesome.min.css?1422823239" />
+
+
+   
+    <link type="text/css" rel="stylesheet" href="http://www.codecovers.eu/assets/css/modules/materialadmin/css/theme-default/material-design-iconic-font.min.css?1422823240" />
+
+   
+    <link type="text/css" rel="stylesheet" href="http://www.codecovers.eu/assets/css/modules/materialadmin/css/theme-default/libs/wizard/wizard.css?1422823375" />
+
+    <link type="text/css" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- END STYLESHEETS -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="http://www.codecovers.eu/assets/js/modules/materialadmin/libs/utils/html5shiv.js?1422823601"></script>
+    <script type="text/javascript" src="http://www.codecovers.eu/assets/js/modules/materialadmin/libs/utils/respond.min.js?1422823601"></script>
+
+
+    <![endif]-->
+
+    <style type="text/css">
+        .form-control-new {
+            padding: 0;
+            height: 37px;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            background: transparent;
+            color: #0c0c0c;
+            font-size: 16px;
+            box-shadow: none;
+        }
+    </style>
+
+
+
+</head>
+
+<body class="menubar-hoverable header-fixed ">
+    <!-- BEGIN HEADER-->
+    <header id="header">
+        <div class="headerbar">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="headerbar-left">
+                <ul class="header-nav header-nav-options">
+                    <li class="header-nav-brand">
+                        <div class="brand-holder">
+                            <a href="">
+                                <span class="text-lg text-bold text-primary">Parsley Demo</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="btn btn-icon-toggle menubar-toggle" data-toggle="menubar" href="javascript:void(0);">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="headerbar-right">
+                <ul class="header-nav header-nav-profile">
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle ink-reaction" data-toggle="dropdown">
+                            <img src="logo.gif" alt="" />
+                            <span class="profile-info">
+                                Infomatrix
+                                <small>Administrator</small>
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu animation-dock">
+                            <li class="dropdown-header">Config</li>
+                            <li><a href="">My profile</a></li>
+                            <li><a href=""><span class="badge style-danger pull-right">16</span>My blog</a></li>
+                            <li><a href="">My appointments</a></li>
+                            <li class="divider"></li>
+                            <li><a href=""><i class="fa fa-fw fa-lock"></i> Lock</a></li>
+                            <li><a href=""><i class="fa fa-fw fa-power-off text-danger"></i> Logout</a></li>
+                        </ul><!--end .dropdown-menu -->
+                    </li><!--end .dropdown -->
+                </ul><!--end .header-nav-profile -->
+                <ul class="header-nav header-nav-toggle">
+                    <li>
+                        <a class="btn btn-icon-toggle btn-default" href="#offcanvas-search" data-toggle="offcanvas" data-backdrop="false">
+                            <i class="fa fa-ellipsis-v"></i>
+                        </a>
+                    </li>
+                </ul><!--end .header-nav-toggle -->
+            </div><!--end #header-navbar-collapse -->
+        </div>
+    </header>
+    <!-- END HEADER-->
+    <!-- BEGIN BASE-->
+    <div id="base">
+        <!-- BEGIN OFFCANVAS LEFT -->
+        <div class="offcanvas">
+        </div><!--end .offcanvas-->
+        <!-- END OFFCANVAS LEFT -->
+        <!-- BEGIN CONTENT-->
+        <div id="content">
+            <section>
+                <div class="section-body contain-lg">
+                    <!-- BEGIN ADVANCED VALIDATION -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="text-primary">Advance validation</h1>
+                            <input type="button" class="flipDiv first btn btn-flat btn-primary ink-reaction pull-right" value="View Html"
+                                   onclick="ViewhtmlData();" id="btnViewhtml" />
+                            <input type="button" class="flipDivBack btn btn-flat btn-primary ink-reaction pull-right" value="View On Web" id="btnViewWeb"
+                                   style="display:none" onclick="ViewFormCode();" />
+                        </div><!--end .col -->
+                        <!--end .col -->
+                        <div class="col-md-12 ">
+                            <form class="form form-validate floating-label" novalidate="novalidate" data-parsley-validate>
+                                <div class="card widgetBox">
+                                    <div class="card-body front" data-face="front" style="height:900px">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" data-parsley-minlength="2" data-parsley-maxlength="5" data-parsley-trigger="keyup" data-html="true"
+                                                   required data-parsley-error-message="Minimum 2 characters/Maximum 5 characters." data-toggle="popover" data-trigger="focus"
+                                                   data-placement="left" data-content="Enter minimum 2 characters.Maximum 5 characters.">
+                                            <label>Min / Max length</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" data-parsley-range="[6,10]" data-parsley-trigger="change" required
+                                                   data-parsley-error-message="Enter number in range of 6 to 10." data-html="true" data-toggle="popover" data-trigger="focus"
+                                                   data-placement="left" data-content="Enter number betwwen 6 to 10 only.">
+                                            <label>Range restriction</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" data-parsley-trigger="change" required data-parsley-type="url" data-trigger="focus"
+                                                   data-parsley-error-message="Invalid url." data-html="true" data-toggle="popover" data-placement="left"
+                                                   data-content="Valid url.eg. www.facebook.com">
+                                            <label>URL</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" required data-parsley-type="number" data-parsley-trigger="change"
+                                                   data-parsley-error-message="Numbers only." data-trigger="focus" data-placement="left"
+                                                   data-html="true" data-toggle="popover" data-content="Integers only.eg. 1234 not 1s">
+                                            <label>Number</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" required data-parsley-type="alphanum" data-parsley-trigger="change" data-trigger="focus"
+                                                   data-parsley-error-message="Alphanumeric text only." data-toggle="popover" data-placement="left"
+                                                   data-html="true" data-content="Alphanumeric text.Like abc123">
+                                            <label>AlphaNumeric</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" required data-parsley-type="integer" data-parsley-trigger="change"
+                                                   data-parsley-error-message="Integers only." data-toggle="popover" data-trigger="focus"
+                                                   data-html="true" data-placement="left" data-content="Integers only.eg. 1234 not 123.45">
+                                            <label>Integers</label>
+                                        </div>
+                                        <div class="card-actionbar">
+                                            <div class="card-actionbar-row">
+                                                <button type="submit" class="btn btn-flat btn-primary ink-reaction" onclick="ValidData();">Validate</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-face="back" class="card-body back second" style="height:900px;display:none">
+                                        <img src="Advval.PNG" />
+                                    </div>
+                                </div><!--end .card -->
+                                <em class="text-caption">
+                                    Basic validation
+                                    <a href="ParsleyBasic.html" class="btn btn-flat btn-primary ink-reaction pull-right">Prev</a>
+                                </em>
+                            </form>
+                        </div>
+                    </div><!--end .row -->
+                    <!-- END ADVANCED VALIDATION -->
+                </div><!--end .section-body -->
+            </section>
+        </div><!--end #content-->
+        <!-- END CONTENT -->
+        <!-- BEGIN MENUBAR-->
+        <div id="menubar" class="menubar-inverse ">
+            <div class="menubar-fixed-panel">
+                <div>
+                    <a class="btn btn-icon-toggle btn-default menubar-toggle" data-toggle="menubar" href="javascript:void(0);">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+                <div class="expanded">
+                    <a href="">
+                        <span class="text-lg text-bold text-primary ">Infomatrix&nbsp;ADMIN</span>
+                    </a>
+                </div>
+            </div>
+            <div class="menubar-scroll-panel">
+                <!-- BEGIN MAIN MENU -->
+                <ul id="main-menu" class="gui-controls">
+                    <!-- BEGIN FORMS -->
+                    <li class="gui-folder">
+                        <a>
+                            <div class="gui-icon"><span class="glyphicon glyphicon-list-alt"></span></div>
+                            <span class="title">Forms</span>
+                        </a>
+                        <!--start submenu -->
+                        <ul>
+                            <li><a href=""><span class="title">Form validation</span></a></li>
+                        </ul><!--end /submenu -->
+                    </li><!--end /menu-li -->
+                    <!-- END FORMS -->
+                </ul><!--end .main-menu -->
+                <!-- END MAIN MENU -->
+                <div class="menubar-foot-panel">
+                    <small class="no-linebreak hidden-folded">
+                        <span class="opacity-75">Copyright &copy; 2015</span> <strong>Infomatrix Inc.</strong>
+                    </small>
+                </div>
+            </div><!--end .menubar-scroll-panel-->
+        </div><!--end #menubar-->
+        <!-- END MENUBAR -->
+    </div><!--end #base-->
+    <!-- END BASE -->
+    <!-- BEGIN JAVASCRIPT -->
+
+    <style type="text/css">
+        .parsley-custom-error-message {
+            color: red;
+            text-align: right;
+            list-style-type: none;
+        }
+    </style>
+
+  <script src="http://www.codecovers.eu/assets/js/modules/materialadmin/libs/jquery/jquery-1.11.2.min.js"></script>
+   
+
+    <script src="http://www.codecovers.eu/assets/js/modules/materialadmin/libs/jquery/jquery-migrate-1.2.1.min.js"></script>
+   
+
+    <script src="http://www.codecovers.eu/assets/js/modules/materialadmin/libs/bootstrap/bootstrap.min.js"></script>
+   
+    <script src="http://www.codecovers.eu/assets/js/modules/materialadmin/libs/spin.js/spin.min.js"></script>
+    
+
+    <script src="http://www.codecovers.eu/assets/js/modules/materialadmin/libs/autosize/jquery.autosize.min.js"></script>
+   
+    <script src="http://www.codecovers.eu/assets/js/modules/materialadmin/libs/nanoscroller/jquery.nanoscroller.min.js"></script>
+  
+
+
+    <script src="http://www.codecovers.eu/assets/js/modules/materialadmin/libs/jquery-validation/dist/jquery.validate.min.js"></script>
+   
+
+
+    <script src="http://www.codecovers.eu/assets/js/modules/materialadmin/libs/jquery-validation/dist/additional-methods.min.js"></script>
+  
+
+    <script src="http://www.codecovers.eu/assets/js/modules/materialadmin/libs/wizard/jquery.bootstrap.wizard.min.js"></script>
+   
+    <script src="http://www.codecovers.eu/assets/js/modules/materialadmin/core/cache/63d0445130d69b2868a8d28c93309746.js"></script>
+ 
+    <script src="http://www.codecovers.eu/assets/js/modules/materialadmin/core/demo/Demo.js"></script>
+   
+
+    <script src="http://www.codecovers.eu/assets/js/modules/materialadmin/core/demo/DemoFormWizard.js"></script>
+   
+
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.7/parsley.min.js"></script>   
+
+
+
+    <script type="text/javascript">
+
+        function ValidData() {
+            setTimeout(addErrorClass, 100);
+        }
+
+        function addErrorClass() {
+            $(".parsley-custom-error-message").each(function (index, value) {
+                if ($(value).html() != "") {
+                    $($(value).parent().parent()).addClass('has-error');
+                    $(value).css("color", "red");
+                    $(value).css("text-align", "right");
+                    $(value).css("list-style-type", "none");
+                }
+            })
+        }
+
+        $(".form-control").on('keyup', function () {
+            var data = $(this);
+            if (data.val() != "") {
+                $(data.parent()).removeClass('has-error')
+            }
+            $($($(".form-control")[1]).parent()).removeClass('has-error')
+        })
+
+
+        function ViewhtmlData() {
+            $('#btnViewWeb').show();
+            $('#btnViewhtml').hide();
+        }
+
+        function ViewFormCode() {
+            $('#btnViewWeb').hide();
+            $('#btnViewhtml').show();
+        }
+
+        (function ($) {
+            $.fn.extend({
+                divFlip: function (options) {
+                    var defaults = {
+                        trigF: '.flipDiv',
+                        trigB: '.flipDivBack'
+                    };
+                    var o = $.extend({}, defaults, options);
+                    return this.each(function () {
+                        var $flipDiv = $(this);
+                        $front = $flipDiv.find('[data-face=front]:first');
+                        $back = $flipDiv.find('[data-face=back]:first');
+
+                        margin = $front.width() / 2;
+                        width = $front.width();
+
+                        height = $front.height();
+                        $back.css({
+                            width: '0px',
+                            height: '' + height + 'px',
+                            marginLeft: '' + margin + 'px',
+                            opacity: '0'
+                        });
+
+                        $(o.trigF).on('click', function () {
+                            $front.animate({
+                                width: '0px',
+                                height: '' + height + 'px',
+                                marginLeft: '' + margin + 'px',
+                                opacity: '0'
+                            }, {
+                                duration: 500
+                            });
+
+                            window.setTimeout(function () {
+                                $back.animate({
+                                    width: '' + width + 'px',
+                                    height: '' + height + 'px',
+                                    marginLeft: '0px',
+                                    opacity: '1'
+                                }, {
+                                    duration: 500
+                                });
+                            }, 500);
+                        });
+
+                        var $button = $(o.trigB);
+                        $button.on('click', function () {
+                            $back.animate({
+                                width: '0px',
+                                height: '' + height + 'px',
+                                marginLeft: '' + margin + 'px',
+                                opacity: '0'
+                            }, {
+                                duration: 500
+                            });
+                            window.setTimeout(function () {
+                                $front.animate({
+                                    width: '' + width + 'px',
+                                    height: '' + height + 'px',
+                                    marginLeft: '0px',
+                                    opacity: '1'
+                                }, {
+                                    duration: 500
+                                });
+                            }, 500);
+                        });
+                    });
+                }
+            });
+        })(jQuery);
+
+        $(document).ready(function () {
+            $('.widgetBox').divFlip();
+            $('.form-control').popover();
+            $(".parsley-custom-error-message").css("color", "red")
+        });
+
+        $(".first").on("click", function () {
+            $(".front").hide(100);
+            $(".second").show(100);
+        })
+        $(".flipDivBack").on("click", function () {
+            $(".second").hide(100);
+            $(".front").show(100);
+        })
+    </script>
+
+
+
+    <!-- END JAVASCRIPT -->
+
+
+</body>
+</html>
