@@ -4,7 +4,7 @@
 
 
 <head>
-    <title>Knockout Demo - Form Wizard</title>
+    <title>ClientSide Form Validation</title>
 
     <!-- BEGIN META -->
     <meta charset="utf-8">
@@ -17,18 +17,12 @@
     <link href="~/Content/jsCssParsley/googleapis.css" rel='stylesheet' type='text/css' />
     <link type="text/css" rel="stylesheet" href="Content/bootstrap.css" />
  
-   
-
-
     <link type="text/css" rel="stylesheet" href="Content/materialadmin.css?1422823243" />
-  
+ 
     <link type="text/css" rel="stylesheet" href="Content/font-awesome.min.css?1422823239" />
-
-
-   
+  
     <link type="text/css" rel="stylesheet" href="Content/material-design-iconic-font.min.css?1422823240" />
-
-   
+  
     <link type="text/css" rel="stylesheet" href="Content/wizard.css?1422823375" />
 
     <link type="text/css" rel="stylesheet" href="Content/font-awesome.min.css">
@@ -37,23 +31,13 @@
     <!--[if lt IE 9]>
     <script type="text/javascript" src="http://www.codecovers.eu/assets/js/modules/materialadmin/libs/utils/html5shiv.js?1422823601"></script>
     <script type="text/javascript" src="http://www.codecovers.eu/assets/js/modules/materialadmin/libs/utils/respond.min.js?1422823601"></script>
-
-
     <![endif]-->
-
-   
+  
 </head>
-
-
-
-
 
 <body class="menubar-hoverable header-fixed ">
     <!-- BEGIN HEADER-->
     <header id="header">
-
-
-
         <div class="headerbar">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="headerbar-left">
@@ -61,7 +45,7 @@
                     <li class="header-nav-brand">
                         <div class="brand-holder">
                             <a href="http://www.codecovers.eu/materialadmin/dashboards/dashboard">
-                                <span class="text-lg text-bold text-primary">Knockout Validation Demo</span>
+                                <span class="text-lg text-bold text-primary">ClientSide Form Validation</span>
                             </a>
                         </div>
                     </li>
@@ -104,13 +88,7 @@
         <!-- END OFFCANVAS LEFT -->
         <!-- BEGIN CONTENT-->
         <div id="content">
-            <section>
-                <div class="section-header">
-                    <ol class="breadcrumb">
-                        <li class="active">Form validation</li>
-                    </ol>
-
-                </div>
+            <section>                
                 <div class="section-body contain-lg">
 
                     <!-- BEGIN BASIC VALIDATION -->
@@ -119,8 +97,6 @@
                             <h1 class="text-primary">Basic validation</h1>
                         </div><!--end .col -->
                        
-
-                    
                         <div class="col-md-12">
                             <div class="pull-right">
                                 <input type="button" class="flipDiv first btn btn-success" value="View Html" />
@@ -131,11 +107,6 @@
                             <form class="form form-validate floating-label" novalidate="novalidate" data-bind="validationOptions: { insertMessages: false}">
                                 <div class="card widgetBox">
                                     <div class="card-body front" data-face="front" style="height: 920px">
-                                      
-                                       
-                                      
-
-
                                       
                                         <div class="form-group">
                                             <input type="text" data-original-title="Name Help Box"  data-toggle="popover" data-trigger="focus" data-placement="left" data-html="true" data-content="Please enter Name <br> This is required field <br> e.g John,Mike,Paul etc"
@@ -172,25 +143,18 @@
                                             <div id="Degree-error" class="help-block" data-bind="validationMessage: viewModel.Description"></div>
 
                                         </div>
-   
-
-                                        <div class="card-actionbar">
+                                           <div class="card-actionbar">
                                             <div class="card-actionbar-row">
                                                 <button type="button" class="btn btn-flat btn-primary ink-reaction" onclick="validateBasic();">Validate</button>
                                             </div>
                                         </div>
-
-
                                     </div>
-
-
                                     <div data-face="back" class="card-body back second" style="height: 920px">
                                         <input type="button" class="flipDivBack btn btn-success" value="View on Web" />
                                         <input type="button" class="btn btn-success" onclick="showModal();" value="View JS" />
                                         
                                         <img src="Images/knockoutcode1.PNG" style="width: 1176px" />
                                     </div>
-
 
                                 <!--end .card-body -->
                                    <!--end .card-actionbar -->
@@ -221,65 +185,71 @@
                     </a>
                 </div>
                 <div class="expanded">
-                    <a href="http://www.codecovers.eu/materialadmin/dashboards/dashboard">
-                        <span class="text-lg text-bold text-primary ">MATERIAL&nbsp;ADMIN</span>
+                    <a href="">
+                        <span class="text-lg text-bold text-primary ">Infomatrix&nbsp;User</span>
                     </a>
                 </div>
             </div>
             <div class="menubar-scroll-panel">
                 <!-- BEGIN MAIN MENU -->
-
-
-
-
-                <ul id="main-menu" class="gui-controls">
-
-                    <!-- END TABLES -->
+              <ul id="main-menu" class="gui-controls">
                     <!-- BEGIN FORMS -->
                     <li class="gui-folder">
                         <a>
                             <div class="gui-icon"><span class="glyphicon glyphicon-list-alt"></span></div>
-                            <span class="title">Forms</span>
+                            <span class="title">Knockout Forms</span>
                         </a>
                         <!--start submenu -->
                         <ul>
-
-
-                            <li><a href="BasicKnock.html" class="active"><span class="title">Form Basic</span></a></li>
-                            <li><a href="koMulti.html"><span class="title">Multi Validation</span></a></li>
-
-                          
-
+                            <li><a href="BasicKnock.html" class="active"><span class="title">Basic Validation</span></a></li>
+                            <li><a href="koMulti.html"><span class="title">Advanced Validation</span></a></li>
+							<li><a href="LiveDemoKnockout.html"><span class="title">Knockout Live Demo</span></a></li>
                         </ul><!--end /submenu -->
                     </li><!--end /menu-li -->
-                   
-
-                </ul><!--end .main-menu -->
-
-
-                <ul id="main-menu" class="gui-controls">
-
-                    <!-- END TABLES -->
-                    <!-- BEGIN FORMS -->
                     <li class="gui-folder">
                         <a>
                             <div class="gui-icon"><span class="glyphicon glyphicon-list-alt"></span></div>
-                            <span class="title">Script Refrences</span>
+                            <span class="title">Parsley Forms</span>
                         </a>
                         <!--start submenu -->
                         <ul>
+                          <li><a href="ParsleyBasic.html" class="active"><span class="title">Basic Validation</span></a></li>
+                            <li><a href="AdvanceVal.html"><span class="title">Advanced Validation</span></a></li>
+							<li><a href="LiveDemoParsley.html"><span class="title">Parsley Live Demo</span></a></li>
+                        </ul><!--end /submenu -->
 
-
+                    </li>
+                    <li class="gui-folder">
+                        <a>
+                            <div class="gui-icon"><span class="glyphicon glyphicon-list-alt"></span></div>
+                            <span class="title">Script References</span>
+                        </a>
+                        <!--start submenu -->
+                        <ul>
                             <li><a href="http://cdnjs.com/libraries/knockout" target="_blank" class="active"><span class="title">Knockout JS</span></a></li>
                             <li><a href="https://code.jquery.com/" target="_blank"><span class="title">Jquery JS</span></a></li>
-
-                            <li><a href="http://www.bootstrapcdn.com/" target="_blank"><span class="title">bootstrap Js</span></a></li>
-
+                            <li><a href="http://www.bootstrapcdn.com/" target="_blank"><span class="title">bootstrap JS</span></a></li>
+                            <li><a href="http://cdnjs.com/libraries/parsley.js" target="_blank"><span class="title">Parsley JS</span></a></li>                            
                         </ul><!--end /submenu -->
                     </li><!--end /menu-li -->
-
-
+                    <li class="gui-folder">
+                        <a>
+                            <div class="gui-icon"><span class="glyphicon glyphicon-list-alt"></span></div>
+                            <span class="title">Document Refrences</span>
+                        </a>
+                        <!--start submenu -->
+                        <ul>
+                            <li><a href="http://knockoutjs.com/" target="_blank" class="active"><span class="title">Knockout Documentation</span></a></li>
+                            <li><a href="https://jquery.com/" target="_blank"><span class="title">Jquery Documentation</span></a></li>
+                            <li><a href="http://getbootstrap.com/" target="_blank"><span class="title">Bootstrap Documentation</span></a></li>
+                            <li><a href="http://parsleyjs.org/" target="_blank"><span class="title">Parsley Documentation</span></a></li>
+                        </ul><!--end /submenu -->
+                    </li><!--end /menu-li -->
+                    <!-- END FORMS -->
                 </ul>
+
+                    <!-- END TABLES -->
+                    <!-- BEGIN FORMS -->                  
                 <!-- END MAIN MENU -->
 
                 <div class="menubar-foot-panel">
@@ -291,7 +261,8 @@
         </div><!--end #menubar-->
         <!-- END MENUBAR -->
         <!-- BEGIN OFFCANVAS RIGHT -->
-        <div class="offcanvas">
+      <!--  -->
+      <!--  -->
 
 
 
@@ -299,91 +270,19 @@
             <!--end .offcanvas-pane -->
             <!-- END OFFCANVAS SEARCH -->
             <!-- BEGIN OFFCANVAS CHAT -->
-            <div id="offcanvas-chat" class="offcanvas-pane style-default-light width-12">
-                <div class="offcanvas-head style-default-bright">
-                    <header class="text-primary">Chat with Ann Laurens</header>
-                    <div class="offcanvas-tools">
-                        <a class="btn btn-icon-toggle btn-default-light pull-right" data-dismiss="offcanvas">
-                            <i class="md md-close"></i>
-                        </a>
-                        <a class="btn btn-icon-toggle btn-default-light pull-right" href="#offcanvas-search" data-toggle="offcanvas" data-backdrop="false">
-                            <i class="md md-arrow-back"></i>
-                        </a>
-                    </div>
-                    <form class="form">
-                        <div class="form-group floating-label">
-                            <textarea name="sidebarChatMessage" id="sidebarChatMessage" class="form-control autosize" rows="1"></textarea>
-                            <label for="sidebarChatMessage">Leave a message</label>
-                        </div>
-                    </form>
-                </div>
-
-                <div class="offcanvas-body">
-                    <ul class="list-chats">
-                        <li>
-                            <div class="chat">
-                                <div class="chat-avatar"><img class="img-circle" src="~/Content/jsCssParsley/avatar9.jpg" alt="" /></div>
-                                <div class="chat-body">
-                                    Yes, it is indeed very beautiful.
-                                    <small>10:03 pm</small>
-                                </div>
-                            </div><!--end .chat -->
-                        </li>
-                        <li class="chat-left">
-                            <div class="chat">
-                                <div class="chat-avatar"><img class="img-circle" src="~/Content/jsCssParsley/avatar9.jpg" alt="" /></div>
-                                <div class="chat-body">
-                                    Did you see the changes?
-                                    <small>10:02 pm</small>
-                                </div>
-                            </div><!--end .chat -->
-                        </li>
-                        <li>
-                            <div class="chat">
-                                <div class="chat-avatar"><img class="img-circle" src="~/Content/jsCssParsley/avatar9.jpg" alt="" /></div>
-                                <div class="chat-body">
-                                    I just arrived at work, it was quite busy.
-                                    <small>06:44pm</small>
-                                </div>
-                                <div class="chat-body">
-                                    I will take look in a minute.
-                                    <small>06:45pm</small>
-                                </div>
-                            </div><!--end .chat -->
-                        </li>
-                        <li class="chat-left">
-                            <div class="chat">
-                                <div class="chat-avatar"><img class="img-circle" src="~/Content/jsCssParsley/avatar9.jpg" alt="" /></div>
-                                <div class="chat-body">
-                                    The colors are much better now.
-                                </div>
-                                <div class="chat-body">
-                                    The colors are brighter than before.
-                                    I have already sent an example.
-                                    This will make it look sharper.
-                                    <small>Mon</small>
-                                </div>
-                            </div><!--end .chat -->
-                        </li>
-                        <li>
-                            <div class="chat">
-                                <div class="chat-avatar"><img class="img-circle" src="~/Content/jsCssParsley/avatar9.jpg" alt="" /></div>
-                                <div class="chat-body">
-                                    Are the colors of the logo already adapted?
-                                    <small>Last week</small>
-                                </div>
-                            </div><!--end .chat -->
-                        </li>
-                    </ul>
-                </div><!--end .offcanvas-body -->
-            </div><!--end .offcanvas-pane -->
+          
+              
+                
+                    
+                       
+                        
+                   
+                <!--end .offcanvas-body -->
+            <!--end .offcanvas-pane -->
             <!-- END OFFCANVAS CHAT -->
 
-        </div><!--end .offcanvas-->
+       <!--end .offcanvas-->
         <!-- END OFFCANVAS RIGHT -->
-
-    </div>
-
 
     <div class="modal fade in" id="ResetPass" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
         <div class="modal-dialog" style="width:1400px">
@@ -495,8 +394,6 @@
   <!--   <script src="~/Scripts/koBasic.js"></script> -->
 
 
-    
-
     <script type="text/javascript">
         (function ($) {
             $.fn.extend({
@@ -583,7 +480,7 @@
 		
 		
 		var viewModel = {};
-    viewModel.Name = ko.observable().extend({ required: { params: true, message: "Please enter User Name" }, minLength: { params: 6, message: "Ohhhh!!!!! come on ,Please enter altleast 6 characters" } });
+viewModel.Name = ko.observable().extend({ required: { params: true, message: "Please enter User Name" }, minLength: { params: 6, message: "Ohhhh!!!!! come on ,Please enter altleast 6 characters" } });
 viewModel.Email = ko.observable().extend({ email: { params: true, message: "Please enter valid Email" }, required: { params: true, message: "Email required" } });
 viewModel.Password = ko.observable().extend({ pattern: { params: '^([a-zA-Z0-9 _-]+)$', message: "Only alpha numeric are allowed." }, required: { params: true, message: "Password required" } });
 viewModel.Degree = ko.observable('').extend({ required: { params: true, message: "Qualification required" } });

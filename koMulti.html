@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Knockout Demo - Form Wizard</title>
+    <title>ClientSide Form Validation</title>
 
     <!-- BEGIN META -->
     <meta charset="utf-8">
@@ -60,7 +60,7 @@
                     <li class="header-nav-brand">
                         <div class="brand-holder">
                             <a href="http://www.codecovers.eu/materialadmin/dashboards/dashboard">
-                                <span class="text-lg text-bold text-primary">Knockout Validation Demo</span>
+                                <span class="text-lg text-bold text-primary">ClientSide Form Validation</span>
                             </a>
                         </div>
                     </li>
@@ -104,18 +104,13 @@
         <!-- BEGIN CONTENT-->
         <div id="content">
             <section>
-                <div class="section-header">
-                    <ol class="breadcrumb">
-                        <li class="active">Form validation</li>
-                    </ol>
-
-                </div>
+               
                 <div class="section-body contain-lg">
 
                     <!-- BEGIN BASIC VALIDATION -->
                     <div class="row">
                         <div class="col-lg-12">
-                            <h1 class="text-primary">Multi validation</h1>
+                            <h1 class="text-primary">Advanced validation</h1>
                         </div><!--end .col -->
 
 
@@ -230,63 +225,74 @@
                 </div>
                 <div class="expanded">
                     <a href="http://www.codecovers.eu/materialadmin/dashboards/dashboard">
-                        <span class="text-lg text-bold text-primary ">MATERIAL&nbsp;ADMIN</span>
+                        <span class="text-lg text-bold text-primary ">MATERIAL&nbsp;User</span>
                     </a>
                 </div>
             </div>
             <div class="menubar-scroll-panel">
                 <!-- BEGIN MAIN MENU -->
-
-
-
-
-                <ul id="main-menu" class="gui-controls">
-
-                    <!-- END TABLES -->
+<ul id="main-menu" class="gui-controls">
                     <!-- BEGIN FORMS -->
                     <li class="gui-folder">
                         <a>
                             <div class="gui-icon"><span class="glyphicon glyphicon-list-alt"></span></div>
-                            <span class="title">Forms</span>
+                            <span class="title">Knockout Forms</span>
                         </a>
                         <!--start submenu -->
                         <ul>
-
-
-                             <li><a href="BasicKnock.html" class="active"><span class="title">Form Basic</span></a></li>
-                            <li><a href="koMulti.html"><span class="title">Multi Validation</span></a></li>
-                           
-
+                            <li><a href="BasicKnock.html" class="active"><span class="title">Basic Validation</span></a></li>
+                            <li><a href="koMulti.html"><span class="title">Advanced Validation</span></a></li>
+							<li><a href="LiveDemoKnockout.html"><span class="title">Knockout Live Demo</span></a></li>
                         </ul><!--end /submenu -->
                     </li><!--end /menu-li -->
-
-
-                </ul><!--end .main-menu -->
-
-
-                <ul id="main-menu" class="gui-controls">
-
-                    <!-- END TABLES -->
-                    <!-- BEGIN FORMS -->
                     <li class="gui-folder">
                         <a>
                             <div class="gui-icon"><span class="glyphicon glyphicon-list-alt"></span></div>
-                            <span class="title">Script Refrences</span>
+                            <span class="title">Parsley Forms</span>
                         </a>
                         <!--start submenu -->
                         <ul>
+                            <li><a href="ParsleyBasic.html" class="active"><span class="title">Basic Validation</span></a></li>
+                            <li><a href="AdvanceVal.html"><span class="title">Advanced Validation</span></a></li>
+							<li><a href="AdvanceVal.html"><span class="title">Advanced Validation</span></a></li>
+							<li><a href="LiveDemoParsley.html"><span class="title">Parsley Live Demo</span></a></li>
+                        </ul><!--end /submenu -->
 
-
+                    </li>
+                    <li class="gui-folder">
+                        <a>
+                            <div class="gui-icon"><span class="glyphicon glyphicon-list-alt"></span></div>
+                            <span class="title">Script References</span>
+                        </a>
+                        <!--start submenu -->
+                        <ul>
                             <li><a href="http://cdnjs.com/libraries/knockout" target="_blank" class="active"><span class="title">Knockout JS</span></a></li>
                             <li><a href="https://code.jquery.com/" target="_blank"><span class="title">Jquery JS</span></a></li>
-
-                            <li><a href="http://www.bootstrapcdn.com/" target="_blank"><span class="title">bootstrap Js</span></a></li>
-
+                            <li><a href="http://www.bootstrapcdn.com/" target="_blank"><span class="title">bootstrap JS</span></a></li>
+                            <li><a href="http://cdnjs.com/libraries/parsley.js" target="_blank"><span class="title">Parsley JS</span></a></li>                            
                         </ul><!--end /submenu -->
                     </li><!--end /menu-li -->
-
-
+                    <li class="gui-folder">
+                        <a>
+                            <div class="gui-icon"><span class="glyphicon glyphicon-list-alt"></span></div>
+                            <span class="title">Document References</span>
+                        </a>
+                        <!--start submenu -->
+                        <ul>
+                            <li><a href="http://knockoutjs.com/" target="_blank" class="active"><span class="title">Knockout Documentation</span></a></li>
+                            <li><a href="https://jquery.com/" target="_blank"><span class="title">Jquery Documentation</span></a></li>
+                            <li><a href="http://getbootstrap.com/" target="_blank"><span class="title">Bootstrap Documentation</span></a></li>
+                            <li><a href="http://parsleyjs.org/" target="_blank"><span class="title">Parsley Documentation</span></a></li>
+                        </ul><!--end /submenu -->
+                    </li><!--end /menu-li -->
+                    <!-- END FORMS -->
                 </ul>
+               
+
+                    <!-- END TABLES -->
+                    <!-- BEGIN FORMS -->
+                  
+               
                 <!-- END MAIN MENU -->
 
                 <div class="menubar-foot-panel">
@@ -298,95 +304,7 @@
         </div><!--end #menubar-->
         <!-- END MENUBAR -->
         <!-- BEGIN OFFCANVAS RIGHT -->
-        <div class="offcanvas">
-
-
-
-            <!-- BEGIN OFFCANVAS SEARCH -->
-            <!--end .offcanvas-pane -->
-            <!-- END OFFCANVAS SEARCH -->
-            <!-- BEGIN OFFCANVAS CHAT -->
-            <div id="offcanvas-chat" class="offcanvas-pane style-default-light width-12">
-                <div class="offcanvas-head style-default-bright">
-                    <header class="text-primary">Chat with Ann Laurens</header>
-                    <div class="offcanvas-tools">
-                        <a class="btn btn-icon-toggle btn-default-light pull-right" data-dismiss="offcanvas">
-                            <i class="md md-close"></i>
-                        </a>
-                        <a class="btn btn-icon-toggle btn-default-light pull-right" href="#offcanvas-search" data-toggle="offcanvas" data-backdrop="false">
-                            <i class="md md-arrow-back"></i>
-                        </a>
-                    </div>
-                    <form class="form">
-                        <div class="form-group floating-label">
-                            <textarea name="sidebarChatMessage" id="sidebarChatMessage" class="form-control autosize" rows="1"></textarea>
-                            <label for="sidebarChatMessage">Leave a message</label>
-                        </div>
-                    </form>
-                </div>
-
-                <div class="offcanvas-body">
-                    <ul class="list-chats">
-                        <li>
-                            <div class="chat">
-                                <div class="chat-avatar"><img class="img-circle" src="~/Content/jsCssParsley/avatar9.jpg" alt="" /></div>
-                                <div class="chat-body">
-                                    Yes, it is indeed very beautiful.
-                                    <small>10:03 pm</small>
-                                </div>
-                            </div><!--end .chat -->
-                        </li>
-                        <li class="chat-left">
-                            <div class="chat">
-                                <div class="chat-avatar"><img class="img-circle" src="~/Content/jsCssParsley/avatar9.jpg" alt="" /></div>
-                                <div class="chat-body">
-                                    Did you see the changes?
-                                    <small>10:02 pm</small>
-                                </div>
-                            </div><!--end .chat -->
-                        </li>
-                        <li>
-                            <div class="chat">
-                                <div class="chat-avatar"><img class="img-circle" src="~/Content/jsCssParsley/avatar9.jpg" alt="" /></div>
-                                <div class="chat-body">
-                                    I just arrived at work, it was quite busy.
-                                    <small>06:44pm</small>
-                                </div>
-                                <div class="chat-body">
-                                    I will take look in a minute.
-                                    <small>06:45pm</small>
-                                </div>
-                            </div><!--end .chat -->
-                        </li>
-                        <li class="chat-left">
-                            <div class="chat">
-                                <div class="chat-avatar"><img class="img-circle" src="~/Content/jsCssParsley/avatar9.jpg" alt="" /></div>
-                                <div class="chat-body">
-                                    The colors are much better now.
-                                </div>
-                                <div class="chat-body">
-                                    The colors are brighter than before.
-                                    I have already sent an example.
-                                    This will make it look sharper.
-                                    <small>Mon</small>
-                                </div>
-                            </div><!--end .chat -->
-                        </li>
-                        <li>
-                            <div class="chat">
-                                <div class="chat-avatar"><img class="img-circle" src="~/Content/jsCssParsley/avatar9.jpg" alt="" /></div>
-                                <div class="chat-body">
-                                    Are the colors of the logo already adapted?
-                                    <small>Last week</small>
-                                </div>
-                            </div><!--end .chat -->
-                        </li>
-                    </ul>
-                </div><!--end .offcanvas-body -->
-            </div><!--end .offcanvas-pane -->
-            <!-- END OFFCANVAS CHAT -->
-
-        </div><!--end .offcanvas-->
+        
         <!-- END OFFCANVAS RIGHT -->
 		
 		
