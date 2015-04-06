@@ -495,6 +495,8 @@
   <!--   <script src="~/Scripts/koBasic.js"></script> -->
 
 
+    
+
     <script type="text/javascript">
         (function ($) {
             $.fn.extend({
@@ -581,7 +583,7 @@
 		
 		
 		var viewModel = {};
-viewModel.Name = ko.observable().extend({ required: { params: true, message: "Please enter User Name" }, minLength: { params: 6, message: "Ohhhh!!!!! come on ,Please enter altleast 6 characters" } });
+    viewModel.Name = ko.observable().extend({ required: { params: true, message: "Please enter User Name" }, minLength: { params: 6, message: "Ohhhh!!!!! come on ,Please enter altleast 6 characters" } });
 viewModel.Email = ko.observable().extend({ email: { params: true, message: "Please enter valid Email" }, required: { params: true, message: "Email required" } });
 viewModel.Password = ko.observable().extend({ pattern: { params: '^([a-zA-Z0-9 _-]+)$', message: "Only alpha numeric are allowed." }, required: { params: true, message: "Password required" } });
 viewModel.Degree = ko.observable('').extend({ required: { params: true, message: "Qualification required" } });
